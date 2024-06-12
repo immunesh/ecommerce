@@ -1,0 +1,307 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% load static %}
+{% block content %} 
+
+<!-- MAIN PAGE================================================== -->
+    <section class="py-13 pt-xl-14 mt-n13 pb-lg-12 bg-cover position-relative" >
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-5 col-lg-5 order-md-2" data-aos="fade-in">
+
+                    <!-- Image -->
+                    <img src="{% static 'assets/img/display1.jpg' %}" style="height:500px; width:500px" class="img-fluid ms-xl-n11 mw-md-174 mb-0 mb-md-0" alt="...">
+
+                </div>
+
+                <div class="col-12 col-md-7 col-lg-7 order-md-1">
+                    <!-- Heading -->
+                    <p class="lead pe-md-8 pe-xl-12 text-capitalize" data-aos="fade-up" data-aos-duration="200">
+                        Trade-in-offer
+                    </p>
+
+                    <!-- Text -->
+                    <h1 class="display-2 text-gradient-1 text-capitalize" data-aos="fade-left" data-aos-duration="150">
+                        Super value deals<br>On all products
+                    </h1>
+                    <p>
+                        Save more with coupons & upto 70% off!
+                    </p>
+
+                    <!-- Buttons -->
+                    <a href="#" class="btn btn-tangerine btn-wide rounded-lg mb-4 mb-md-0 me-md-5 text-w" data-aos="fade-up" data-aos-duration="200">Shop Now</a>
+                    
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+    <!--some photos-->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" style="height:100px;width:170px" src="{% static 'assets/img/shipping.jpg' %}" alt="Card image cap">
+                {% comment %} <div class="card-body"> {% endcomment %}
+                    <h5 class="card-title bg-light text-dark"><strong>Free Shipping</strong></h5>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" style="height:100px;width:170px" src="{% static 'assets/img/order.jpg' %}" alt="Card image cap">
+                {% comment %} <div class="card-body"> {% endcomment %}
+                    <h5 class="card-title bg-light text-dark"><strong>Online order</strong></h5>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" style="height:100px;width:170px" src="{% static 'assets/img/money.jpg' %}" alt="Card image cap">
+                {% comment %} <div class="card-body"> {% endcomment %}
+                    <h5 class="card-title bg-light text-dark"><strong>Save Money</strong></h5>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" style="height:100px;width:170px" src="{% static 'assets/img/promo.jpg' %}" alt="Card image cap">
+                {% comment %} <div class="card-body"> {% endcomment %}
+                    <h5 class="card-title bg-light text-dark"><strong>Promotions</strong></h5>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        </div>
+      
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" style="height:100px;width:170px" src="{% static 'assets/img/happy.jpg' %}" alt="Card image cap">
+                {% comment %} <div class="card-body"> {% endcomment %}
+                    <h5 class="card-title bg-light text-dark"><strong>Happy Sell</strong></h5>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img class="card-img-top" style="height:100px;width:170px" src="{% static 'assets/img/support.png' %}" alt="Card image cap">
+                {% comment %} <div class="card-body"> {% endcomment %}
+                    <h5 class="card-title bg-light text-dark"><strong>F24/7 support</strong></h5>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    <!-- FEATURED PRODUCT
+    ================================================== -->
+    <section class="pt-5 pb-9 py-md-11 bg-white">
+        <div class="container">
+            <div class="text-center mb-5 mb-md-8">
+                <h1 class="mb-1">Featured Products</h1>
+                <p class="font-size-lg text-capitalize">Summer Collection New Modern Design</p>
+            </div>
+            <div class="row">
+                {% for i in product %}
+                <div class="col">
+                    <div class="card h-50">
+                        <img class="card-img-top" style="height:200px;width:210px" src={{i.image}} alt="Card image cap">
+                        <div class="card-body">
+                            <span>{{i.brand}}</span>
+                            <h5 class="card-title text-dark"><strong>{{i.product_name}}</strong></h5>
+                            <div class="content text-left">
+                                <div class="stars">
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-left">
+                                {% comment %} <del class="font-size-sm me-2">$959</del> {% endcomment %}
+                                <ins class="h4 mb-0">{{i.price}}</ins>
+                            </div>
+                            <div class="d-flex float-right"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  fill="currentColor" class="bi bi-cart" viewBox="0 0 20 20">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!--background with hover effects-->
+    <section>
+        <div class="container-fluid" >
+            <img src="{% static 'assets/img/background.jpg' %}" class="img-fluid" style="width:100%;height:200px;" alt="Image not found" >
+            <div class="centered text-white" style="font-size:20px;position:absolute;top: 20%;left: 50%;transform: translate(-50%, -50%);">
+                <span>Repair Services</span>
+            </div>
+            <div class="centered" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+                <h3 class="text-white" style="font-size:30px">Up to 70% Off - All T-Shirts & Accessories</h3> 
+            </div>
+            <div class="centered" style="position: absolute;top: 80%;left: 50%;transform: translate(-50%, -50%);">
+                <a class= "btn btn-light text-primary" style="font-size:20px" href="#">Explore More</a>
+            </div>
+        </div>
+    </section>
+
+
+
+                              
+    <!-- ICON BLOCKS
+    ================================================== -->
+    <section class="py-5 pt-md-11 pb-md-12 bg-white text-center">
+        <div class="container">
+            <div class="mb-8">
+                <h1 class="mb-1">New Arrivals</h1>
+                <p class="font-size-lg mb-0 text-capitalize">Summer Collection New Modern Design</p>
+            </div>
+            <div class="row">
+                {% for n in new_arrivals %}
+                <div class="col">
+                    <div class="card h-50">
+                        <img class="card-img-top" style="height:200px;width:210px" src={{n.image}} alt="Card image cap">
+                        <div class="card-body">
+                            <span >{{n.brand}}</span>
+                            <h5 class="card-title text-dark content text-left"><strong>{{n.product_name}}</strong></h5>
+                            <div class="content text-left">
+                                <div class="stars">
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                    <i class="fa fa-star" style="color:yellow;font-size:10px"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-left">
+                                {% comment %} <del class="font-size-sm me-2">$959</del> {% endcomment %}
+                                <ins class="h4 mb-0">{{n.price}}</ins>
+                            </div>
+                            <div class="d-flex float-right"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  fill="currentColor" class="bi bi-cart" viewBox="0 0 20 20">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                                </svg>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!--Bannner Section-->
+    <section class="py-5 pt-md-11 pb-md-12 bg-white text-center">
+       <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="card">
+                    <img src="{% static 'assets/img/banner1.jpg' %}" class="img-fluid" style="height:400px">
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 40%;left: 30%;transform: translate(-50%, -50%);">
+                        <span>Crazy Deals</span>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 50%;left: 30%;transform: translate(-50%, -50%);">
+                        <h3><strong>buy 1 get 1 Free</strong></h3>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 60%;left: 30%;transform: translate(-50%, -50%);">
+                        <span>The best classic dress is on sale</span>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 70%;left: 30%;transform: translate(-50%, -50%);">
+                        <a class="btn btn-dark text-white" href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card">
+                    <img src="{% static 'assets/img/banner2.jpg' %}" style="height:400px">
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 40%;left: 30%;transform: translate(-50%, -50%);">
+                        <span>Spring/Summer</span>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 50%;left: 30%;transform: translate(-50%, -50%);">
+                        <h3><strong>Upcoming Season</strong></h3>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 60%;left: 30%;transform: translate(-50%, -50%);">
+                        <span>The best classic dress is on sale</span>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 70%;left: 30%;transform: translate(-50%, -50%);">
+                        <a class="btn btn-dark text-white" href="#">Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <br><br>
+  
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <img src="{% static 'assets/img/banner3.jpg' %}" style="height:400px">
+                    <div class="centered text-black" style="position:absolute;top: 40%;left: 30%;transform: translate(-50%, -50%);">
+                        <h3 class="text-black" style="font-size:30px"><strong>Seasonal Sale</strong></h3>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 50%;left: 35%;transform: translate(-50%, -50%);">
+                        <span>Winter collection - 50% Off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="{% static 'assets/img/banner4.jpg' %}" style="height:400px">
+                    <div class="centered text-black" style="position:absolute;top: 40%;left: 60%;transform: translate(-50%, -50%);">
+                        <h3 class="text-black" style="font-size:20px"><strong>New Footwear Collection</strong></h3>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 60%;left: 60%;transform: translate(-50%, -50%);">
+                        <span>Spring/Summer 2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <img src="{% static 'assets/img/banner5.jpg' %}" style="height:400px">
+                    <div class="centered text-black" style="position:absolute;top: 40%;left: 30%;transform: translate(-50%, -50%);">
+                        <h3 class="text-black" style="font-size:30px"><strong>T-Shirts</strong></h3>
+                    </div>
+                    <div class="centered text-black" style="font-size:20px;position:absolute;top: 50%;left: 30%;transform: translate(-50%, -50%);">
+                        <span>New trendy shirts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER & SOCIAL
+    ================================================== -->
+    <section class="pt-0 pt-md-2 pb-md-12 bg-dark">
+        <div class="container">
+            <div class="row">
+               <div class="col-6">
+                    <h3 class="text-white mt-5" style="font-size:30px">Sign Up For Newsletters</h3>
+                    <p class="text-white" style="font-size:20px">Get E-mail updates about our latest shop and special offers.</p>
+               </div>
+                <div class="col-6">
+                    <form>
+                        <div class="d-flex">
+                            <input type="text" class="form-control mt-10" style="font-size:20px" placeholder="Enter your email!!">
+                            <br>
+                            <button class="btn btn-info btn-lg ml-auto mt-10 text-center" style="padding-top:0.122rem;padding-right:4.5rem;font-size:1.5rem">
+                                Sign Up
+                            </button>
+                        </div>
+            
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+{% endblock %}
+
