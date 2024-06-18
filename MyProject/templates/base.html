@@ -26,19 +26,14 @@
       <link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
       <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" />
     <!-- Theme CSS -->
-      <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/theme.css' %}">
       <title>Ecommerce Website - {% block title %}{% endblock %}</title>
-      {% comment %} <script src="https://kit.fontawesome.com/6757562f70.js" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> {% endcomment %}
-      <script>
-        $('.read-only-ratings').rateYo({
-          rating: 5
-        });
-      </script>
-   </head>
+      <script src="https://kit.fontawesome.com/6757562f70.js" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+     
+  </head>
    <body>
-
-       
+    
         {% include 'components/header.html'%}
         {% block content %}  {% endblock %}
         {% include 'components/footer.html'%}
@@ -71,7 +66,7 @@
     <!-- Map -->
       <script src='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <!-- Theme JS -->
-      <script src="{% static 'assets/js/theme.min.js' %}"></script>
+      <script src="{% static 'assets/js/theme.js' %}"></script>
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
       <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
    </body>
