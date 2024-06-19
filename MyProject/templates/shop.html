@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Shop{% endblock %}
+{% load static %}
+{% block content %} 
+<!-- MAIN PAGE================================================== -->
+<section id="banner" style="background-image: url('{% static 'assets/img/background.jpg' %}')">
+    <h2>#Stay Home</h2>
+    <p style="color:white"> Save more with coupons & upto 70% off!</p>
+</section>
+
+<!--Featured Products-->
+<section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p>Summer Collection New Modern Design</p>
+    <div class="pro-container">
+        {% for i in product %}
+        <div class="pro" onclick="window.location.href='{% url 'product' %}'">
+            <img src="{{i.image}}" alt="">
+            <div class="des">
+                <span>{{i.brand}}</span>
+                <h5>{{i.name}}</h5>
+                <div class="star">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <h4>{{i.price}}</h4>
+            </div>
+            <a href="{% url 'product' %}"><i class="cart1 fa fa-shopping-cart"></i></a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!--pagination-->
+<section id="pagination" class="section-p1">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#"><i class="fa fa-long-arrow-alt-right"></i></a>
+</section>
+
+<!--Newsletter-->
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+{% endblock %}

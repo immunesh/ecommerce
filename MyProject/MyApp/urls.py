@@ -7,13 +7,9 @@ from . import views
 urlpatterns = [
    path('',views.Home,name='home'),
    path('base/',views.Base,name='base'),
-   path('login/',views.Login,name='login'),
-   path('register/',views.Register,name='register'),
-   path('logout/',views.Logout,name='logout'),
-   path('password_reset/',views.PasswordReset,name='password_reset'),
-   path('password_done/',views.PasswordDone,name='password_done'),
-   path('password_confirm/',views.PasswordConfirm,name='password_confirm'),
-   path('password_complete/',views.PasswordComplete,name='password_complete'),
+   path('shop/',views.Shop,name='shop'),
+   path('product/',views.Product_des,name='product'),
+
 
    
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

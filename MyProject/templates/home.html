@@ -67,7 +67,7 @@
                 </div>
                 <h4>{{i.price}}</h4>
             </div>
-            <a href="#"><i class="cart fa fa-shopping-cart"></i></a>
+            <a href="{% url 'product' %}"><i class="cart1 fa fa-shopping-cart"></i></a>
         </div>
         {% endfor %}
     </div>
@@ -84,7 +84,7 @@
 <section id="product1" class="section-p1">
     <h2>New Arrivals</h2>
     <p>Summer Collection New Modern Design</p>
-    <div class="pro-container">
+    <div class="pro-container">x``
         {% for n in new_arrivals %}
         <div class="pro">
             <img src="{{n.image}}" alt="">
@@ -100,7 +100,7 @@
                 </div>
                 <h4>{{n.price}}</h4>
             </div>
-            <a href="#"><i class="cart fa fa-shopping-cart"></i></a>
+            <a href="#"><i class="cart1 fa fa-shopping-cart"></i></a>
         </div>
         {% endfor %}
     </div>
@@ -149,8 +149,5 @@
         <button class="normal">Sign Up</button>
     </div>
 </section>
-
-
-
 {% endblock %} 
 
