@@ -53,7 +53,7 @@
     <p>Summer Collection New Modern Design</p>
     <div class="pro-container">
         {% for i in product %}
-        <div class="pro">
+        <div class="pro" onclick="window.location.href='{% url 'product' %}'">
             <img src="{{i.image}}" alt="">
             <div class="des">
                 <span>{{i.brand}}</span>

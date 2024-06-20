@@ -1,0 +1,125 @@
+<!-- Modals -->
+<div class="modal" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Signin -->
+            <div class="collapse show" id="collapseSignin" data-bs-parent="#accountModal">
+                <div class="modal-header">
+                    <h3 class="modal-title"><strong>Log In to your Account!</strong></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Form Signin -->
+                    <form class="mb-5" method="post" action="{% url 'login' %}">
+                      {% csrf_token %}
+                        <!-- Email -->
+                        <div class="form-group mb-5">
+                            <label for="modalSigninEmail" style="font-size:20px;font-weight:500">
+                             <strong> Email</strong>
+                            </label>
+                            <input type="email" class="form-control" id="modalSigninEmail" placeholder="abc@gmail.com" name="email" style="font-size:20px">
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group mb-5">
+                            <label for="modalSigninPassword" style="font-size:20px;font-weight:500">
+                            <strong>Password</strong>
+                            </label>
+                            <input type="password" class="form-control" id="modalSigninPassword" placeholder="**********" name="password" style="font-size:20px">
+                        </div>
+    
+                        <!-- Submit -->
+                        <button class="btn btn-block btn-primary" style="font-size:20px" type="submit">
+                            LOGIN
+                        </button>
+                    </form>
+
+                    <!-- Text -->
+                    <p class="mb-0 font-size-lg text-center" style="color:black">
+                        Don't have an account? <a class="text-underline" data-bs-toggle="collapse" href="#collapseSignup" role="button" aria-expanded="false" aria-controls="collapseSignup"><strong>Sign up</strong></a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Signup -->
+            <div class="collapse" id="collapseSignup" data-bs-parent="#accountModal">
+                <div class="modal-header">
+                    <h3 class="modal-title"><strong>Sign Up!<strong></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Form Signup -->
+                    <form class="mb-5" method="post" action="{% url 'register' %}">
+                      {% csrf_token %}
+                        <!-- Username -->
+                        <div class="form-group mb-5">
+                            <label for="modalSignupUsername" style="font-size:20px;font-weight:500">
+                                Username
+                            </label>
+                            <input type="text" class="form-control" id="modalSignupUsername" placeholder="Enter your name!" name="name" style="font-size:20px">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group mb-5">
+                            <label for="modalSignupEmail" style="font-size:20px;font-weight:500">
+                              Email
+                            </label>
+                            <input type="email" class="form-control" id="modalSignupEmail" placeholder="johndoe@creativelayers.com" name="email" style="font-size:20px">
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group mb-5">
+                            <label for="modalSignupPassword" style="font-size:20px;font-weight:500">
+                                Password
+                            </label>
+                            <input type="password" class="form-control" id="modalSignupPassword" placeholder="**********" name="password" style="font-size:20px">
+                        </div>
+
+                        <!-- Submit -->
+                        <button class="btn btn-block btn-primary" style="font-size:20px" type="submit">
+                            SIGN UP
+                        </button>
+                    </form>
+
+                    <!-- Text -->
+                    <p class="mb-0 font-size-lg text-center">
+                        Already have an account? <a class="text-underline" data-bs-toggle="collapse" href="#collapseSignin" role="button" aria-expanded="true" aria-controls="collapseSignin"><strong>Log In</strong></a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Forgot Password -->
+            <div class="collapse" id="collapseForgotPassword" data-bs-parent="#accountModal">
+                <div class="modal-header">
+                    <h5 class="modal-title">Recover password!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- Form Recover Password -->
+                    <form class="mb-5">
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="modalForgotpasswordEmail">
+                                Email
+                            </label>
+                            <input type="email" class="form-control" id="modalForgotpasswordEmail" placeholder="johndoe@creativelayers.com">
+                        </div>
+
+                        <!-- Submit -->
+                        <button class="btn btn-block btn-primary" type="submit">
+                            RECOVER PASSWORD
+                        </button>
+                    </form>
+
+                    <!-- Text -->
+                    <p class="mb-0 font-size-sm text-center">
+                        Remember your password? <a class="text-underline" data-bs-toggle="collapse" href="#collapseSignin" role="button" aria-expanded="false" aria-controls="collapseSignin">Log In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
