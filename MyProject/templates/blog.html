@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Blog{% endblock %}
+{% load static %}
+{% block content %} 
+
+<!--Banner-->
+<section id="banner" class="section-m1" style="background-image: url('{% static 'assets/img/blog.jpg' %}')">
+    <h2 style="color:black">#Read More</h2>
+    <p style="color:black"> Read all case studies about our products!</p>
+</section>
+
+<!--Blog-->
+<section id="blog">
+    <div class="blog-box">
+        <div class="blog-img">
+            <img src="{% static 'assets/img/blog1.jpg' %}" alt="">
+        </div>
+        <div class="blog-details">
+            <h4>The Cotton-Jersy Zip-up Hoodie</h4>
+            <p>A zip hoodie made from heavyweight cotton jersey. The style is cut to a relaxed fit and appliquéd with a tonal Equestrian Knight Design. Part of Burberry Classics, wardrobe foundations with a unique Burberry slant.</p>
+            <a href="#">CONTINUE READING</a>
+        </div>
+        <h1>13/01</h1>
+    </div>
+</section>
+
+<!--pagination-->
+<section id="pagination" class="section-p1">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#"><i class="fa fa-long-arrow-alt-right"></i></a>
+</section>
+
+<!--Newsletter-->
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+{% endblock %}

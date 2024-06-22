@@ -64,9 +64,9 @@ def Login(request):
             return redirect('login')
     return render(request,'login.html')
 
-
-# def PasswordDone(request):
-#     return render(request,'password_reset_done.html')
+def Logout(request):
+    logout(request)
+    return redirect('home') 
 
 
 # def PasswordReset(request):
@@ -82,7 +82,7 @@ def Login(request):
     #                 c = {
     #                     "email": user.email,
     #                     "domain": request.META["HTTP_HOST"],
-    #                     "site_name": "Learning Management System",
+    #                     "site_name": "Ecommerce",
     #                     "uid": urlsafe_base64_encode(force_bytes(user.pk)),
     #                     "user": user,
     #                     "token": default_token_generator.make_token(user),
@@ -98,13 +98,11 @@ def Login(request):
     #     form=info()
 #     return render(request,'password_reset_form.html')
 
+def Blog(request):
+        return render(request,'blog.html')
 
 
-# def PasswordConfirm(request):
-#     return render(request,'password_reset_confirm.html')
 
-# def PasswordComplete(request):
-#     return render(request,'password_reset_complete.html')
 
 
 

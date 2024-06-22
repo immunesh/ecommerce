@@ -87,6 +87,10 @@
                     <p class="mb-0 font-size-lg text-center">
                         Already have an account? <a class="text-underline" data-bs-toggle="collapse" href="#collapseSignin" role="button" aria-expanded="true" aria-controls="collapseSignin"><strong>Log In</strong></a>
                     </p>
+
+                    <p class="mb-0 font-size-lg text-center">
+                        Forgot Password? <a class="text-underline" data-bs-toggle="collapse" href="#collapseForgotPassword" role="button" aria-expanded="true" aria-controls="collapseSignin"><strong>Forgot Password</strong></a>
+                    </p>
                 </div>
             </div>
 
@@ -109,9 +113,9 @@
                         </div>
 
                         <!-- Submit -->
-                        <button class="btn btn-block btn-primary" type="submit">
+                        <a href="{% url 'password_reset' %}" class="btn btn-block btn-primary" type="submit">
                             RECOVER PASSWORD
-                        </button>
+                        </a>
                     </form>
 
                     <!-- Text -->
