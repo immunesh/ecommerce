@@ -33,7 +33,7 @@
      
   </head>
    <body>
-    
+        {% include 'components/modals.html'%}
         {% include 'components/header.html'%}
         {% block content %}{% endblock %}
         {% include 'components/footer.html'%}
@@ -61,24 +61,7 @@
       <script src="{% static 'assets/libs/quill/dist/quill.min.js' %}"></script>
       <script src="{% static 'assets/libs/smooth-scroll/dist/smooth-scroll.min.js' %}"></script>
       <script src="{% static 'assets/libs/typed.js/lib/typed.min.js' %}"></script>
-      <!--js-->
-<script>
-  var main=document.getElementById("MainImg");
-  var small=document.getElementByClassName("small-img");
-
-  smallimg[0].onclick=function(){
-      main.src=small[0].src;
-  }
-  smallimg[1].onclick=function(){
-      main.src=small[1].src;
-  }
-  smallimg[2].onclick=function(){
-      main.src=small[2].src;
-  }
-  smallimg[3].onclick=function(){
-      main.src=small[3].src;
-  }
-</script>
+      
     
       
     <!-- Map -->
