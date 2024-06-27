@@ -18,6 +18,8 @@ urlpatterns = [
    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='registration/password-reset-form.html'), name="password_reset_confirm"),
    path('password_reset_complete', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password-reset-complete.html'), name="password_reset_complete"),
    path('blog/',views.Blog,name='blog'),
+   path('about/',views.About,name='about'),
+   path('contact/',views.Contact,name='contact'),
 
    
 ] +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

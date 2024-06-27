@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Blog{% endblock %}
+{% load static %}
+{% block content %} 
+
+<!--Banner-->
+<section id="banner"  style="background-image: url('{% static 'assets/img/blog.jpg' %}')">
+    <h2 style="color:black">#Know Us</h2>
+    <p style="color:black"> Get all details about our products!</p>
+</section>
+
+<!--about header-->
+<section id="about-head" class="section-p1">
+    <img src="{% static 'assets/img/who.png' %}" alt="">
+    <div>
+        <h2>Who We Are?</h2>
+        <p style="font-size:20px">Lorem ipsum dolor sit amet. Aut consectetur laborum qui corporis dignissimos aut voluptatibus recusandae aut veniam commodi et molestias saepe. 
+            Sit dolor rerum vel accusamus doloribus ut excepturi ipsam ab expedita expedita quo illum consectetur sed quasi harum ut nostrum eaque. 
+            Ut amet dolorem a quae internos qui dicta distinctio quo numquam fuga rem provident rerum non commodi soluta est pariatur impedit.</p>
+        <abbr style="font-size:20px" title="">Sit dolor rerum vel accusamus doloribus ut excepturi ipsam ab expedita expedita quo illum consectetur sed quasi harum ut nostrum eaque.</abbr>
+        <br><br>
+        <marquee style="font-size:20px" bgcolor="#ccc" loop="-1" scrollamount="5" width="100%">Create stunning images with as much or as little control as you like thanks to a choice of
+            Basic and Creative Modes.</marquee>
+    </div>
+</section>
+
+<!--video-->
+<section id="about-app" class="section-p1">
+    <h1>Download Our <a href="#">App</a></h1>
+    <div class="video">
+        <video autoplay muted loop src="{% static 'assets/img/videos/1.mp4' %}"></video>
+    </div>
+</section>
+
+<!--some features-->
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="{% static 'assets/img/shipping.jpg' %}" style="height:100px;width:100px">
+        <h6>Free Shipping</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'assets/img/order.jpg' %}" style="height:100px;width:100px">
+        <h6>Online Order</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'assets/img/money.jpg' %}" style="height:100px;width:100px">
+        <h6>Save Money</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'assets/img/promo.jpg' %}" style="height:100px;width:100px">
+        <h6>Promotions</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'assets/img/happy.jpg' %}" style="height:100px;width:100px">
+        <h6>Happy Sell</h6>
+    </div>
+    <div class="fe-box">
+        <img src="{% static 'assets/img/support.png' %}" style="height:100px;width:100px">
+        <h6>F24/7 Support</h6>
+    </div>
+</section>
+
+<!--Newsletter-->
+<section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail Updates about our latest shop and <span>special offers.</span></p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+    </div>
+</section>
+
+{% endblock %}
